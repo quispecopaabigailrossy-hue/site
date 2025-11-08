@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>4to de Secundaria — U.E. Técnico Humanístico "Andino"</title>
+  <link rel="icon" href="assets/imagen1.jpg">
+  <style>
+  :root{
+    --celeste:#5fc2e6;
+    --celeste-osc:#2ea6d0;
+    --blanco:#E6E6FA;
+    --gris:#f4f7fb;
+    --texto:#000000;
+    --max-width:1200px;
+    --radius:14px;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:linear-gradient(135deg,#e6f0ff,#f2e6ff,#e6faff);
+    color:var(--texto);
+  }
+  .container{max-width:var(--max-width);margin:20px auto;padding:18px}
+  header{
+    background:linear-gradient(90deg,var(--blanco),rgba(95,194,230,0.06));
+    border-radius:16px;
+    padding:14px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    box-shadow:0 8px 28px rgba(16,40,60,0.06)
+  }
+  .logo{
+    width:120px;height:120px;border-radius:12px;
+    background:var(--blanco);display:flex;align-items:center;justify-content:center;
+    border:4px solid var(--celeste);overflow:hidden;
+  }
+  .logo img{width:100%;height:100%;object-fit:contain}
+
+  /* 🔹 título del curso animado */
+  .title h1{
+    margin:0;
+    font-size:3em;
+    line-height:1.2em;
+    font-family:'Lobster', cursive;
+    background:linear-gradient(90deg,#2ea6d0,#5fc2e6,#2ea6d0);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    overflow:hidden;
+    white-space:nowrap;
+    animation:escribir 7s steps(40,end) infinite, brillo 3s ease-in-out infinite;
+  }
+  @keyframes escribir {
+    0% { width: 0; }
+    40% { width: 100%; }
+    60% { width: 100%; }
+    100% { width: 0; }
+  }
+  @keyframes brillo {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.6); }
+    100% { filter: brightness(1); }
+  }
+
+  nav{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+  .btn{
+    background:linear-gradient(135deg,var(--celeste),var(--blanco));
+    color:#fff;
+    padding:10px 18px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:700;
+    transition: all 0.3s ease;
+    box-shadow:0 6px 12px rgba(0,0,0,0.12);
+  }
+  .btn:hover{background:linear-gradient(135deg,var(--celeste-osc),#ffffff);transform: translateY(-2px);}
+  section{margin-top:20px}
+  .card{
+    background:linear-gradient(135deg,var(--blanco),var(--celeste));
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(17,48,63,0.08);
+    margin-top:12px;
+  }
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px}
+  .gallery img{width:100%;height:150px;object-fit:cover;border-radius:10px}
+  .video-wrap{position:relative;padding-top:56.25%;overflow:hidden;border-radius:10px;margin-top:12px}
+  .video-wrap iframe{position:absolute;left:0;top:0;width:100%;height:100%}
+  footer{margin-top:26px;padding:18px;border-radius:12px;background:linear-gradient(90deg,#fff,rgba(95,194,230,0.04));display:flex;justify-content:space-between;align-items:center}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><img src="assets/imagen1.jpg" alt="Logo U.E. Andino"></div>
+      <div class="title"><h1>4to de Secundaria</h1></div>
+      <nav>
+		<a class="btn" href="horario4.html">Horario</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="card">
+          <h2>ASIGNATURAS PRINCIPALES</h2>
+          <ul>
+            <li>Lengua y Literatura</li>
+            <li>Matemáticas</li>
+            <li>Ciencias Naturales</li>
+            <li>Ciencias Sociales</li>
+            <li>Educación Física</li>
+            <li>Sistemas Informaticos</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>¡BIENVENIDOS A CUARTO DE SECUNDARIA!</h2>
+          <p>Este curso marca un momento de madurez y compromiso. Los estudiantes desarrollan nuevas habilidades y participan en proyectos que les preparan para asumir mayores retos en su formación.  </p>
+        </div>
+
+        <div class="card">
+          <h2>ESTUDIANTES</h2>
+          <div class="gallery">
+            <img src="assets/imagen32.jpg" alt="Actividad 3">
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong>U.E. Técnico Humanístico "Andino"</strong><br>Gestión 2025</div>
+      <a class="btn" href="index.html">Volver al Inicio</a>
+    </footer>
+  </div>
+</body>
+</html>
